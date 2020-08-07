@@ -37,6 +37,7 @@ attr_accessor :id, :name, :breed
             SQL
             DB[:conn].execute(sql, self.name, self.breed)
             @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
+            self
         end 
     end 
 
@@ -57,7 +58,7 @@ attr_accessor :id, :name, :breed
     end
 
     def self.find_or_create_by
-        
+
     end 
      
 
