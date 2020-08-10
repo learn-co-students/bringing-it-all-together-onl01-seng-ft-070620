@@ -80,7 +80,6 @@ class Dog
     else
       self.create(name: name, breed: breed)
     end
-    #binding.pry
   end
 
 end
